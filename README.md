@@ -27,9 +27,6 @@ You can start developing by editing the files inside the **app** directory. This
 
 ## Issues
 
-. promise should not fail.
-Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was receivedUnderstand this error
-
 . "Set Alarm" should set "Alarm set to" value.
 
 . verifyTime should output false when InputText is empty.
