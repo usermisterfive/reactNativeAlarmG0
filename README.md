@@ -35,12 +35,8 @@ You can start developing by editing the files inside the **app** directory. This
 
 . alarm set to value should only be displayed when alarm was enabled.
 
-. add volume up and down.
-
 + date1 should be defined.
   app\(tabs)\index.tsx:42 Uncaught (in promise) ReferenceError: date1 is not defined
-
-. on iphone with disabled sound the alarm should produce the sound.
 
 . on iphone "Alarm set to" should not collide with task bar.
 
