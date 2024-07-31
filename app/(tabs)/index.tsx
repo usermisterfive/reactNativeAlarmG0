@@ -13,6 +13,7 @@ export default function HomeScreen() {
   const [minutes, setMinutes] = useState();
   const [volume, setVolume] = useState();
   async function playSound() {
+    await Audio.setAudioModeAsync({playsInSilentModeIOS: true,});
     const { sound } = await Audio.Sound.createAsync(require('./808.mp3'));
     setSound(sound);
     if (verifyVolume()) {
