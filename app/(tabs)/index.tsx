@@ -38,11 +38,18 @@ export default function HomeScreen() {
       date1.setMinutes(minutes);
       date1.setSeconds(0);
       const date2 = new Date();
-      console.log("date1=" + date1 + ", date2=" + date2 + ", date1 - date2=" + (date1 - date2));
+      const dateDiff = date1 - date2;
+      const dateDiff2 = 86400000 + dateDiff;
+      console.log("date1=" + date1 + ", date2=" + date2 + ", date1 - date2=" + dateDiff);
       console.log("verifyVolume()=" + verifyVolume());
-      if (date1 > date2) {
-        setTimeout(() => playSound(), (date1 - date2));
-      }
+      dateDiff > 0 ? setAlarm4(dateDiff) : setAlarm4(dateDiff2);
+    }
+    function setAlarm4(dateDiff0) {
+      setTimeout(() => playSound(), dateDiff0);
+      const hour = 1000 * 3600;
+      const minute = 1000 * 60;
+      console.log("Alarm will ring in " + dateDiff0 / (dateDiff0 > hour ? hour : minute)
+      + (dateDiff0 > hour ? " hours." : " minutes."));
     }
   }
   function verifyTime() {
