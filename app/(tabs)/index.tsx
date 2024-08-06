@@ -5,6 +5,7 @@ import { Audio } from 'expo-av';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
+import { ThemedTextInput } from '@/components/ThemedTextInput';
 import { ThemedView } from '@/components/ThemedView';
 
 export default function HomeScreen() {
@@ -72,15 +73,15 @@ export default function HomeScreen() {
       </ThemedView>
       <ThemedView style={styles.titleContainer}>
         <ThemedText>Hours:</ThemedText>
-        <TextInput onChangeText={newText => setHours(newText)} style={styles.titleContainer} />
+        <ThemedTextInput onChangeText={newText => setHours(newText)} style={styles.titleContainer} />
       </ThemedView>
       <ThemedView style={styles.titleContainer}>
         <ThemedText>Minutes:</ThemedText>
-        <TextInput onChangeText={newText => setMinutes(newText)} style={styles.titleContainer} />
+        <ThemedTextInput onChangeText={newText => setMinutes(newText)} style={styles.titleContainer} />
       </ThemedView>
       <ThemedView style={styles.titleContainer}>
         <ThemedText>Volume from 0.0 to 1.0:</ThemedText>
-        <TextInput onChangeText={newText => setVolume(newText)} style={styles.titleContainer} />
+        <ThemedTextInput onChangeText={newText => setVolume(newText)} style={styles.titleContainer} />
       </ThemedView>
       <ThemedView style={styles.titleContainer}>
         <Button title="Set Alarm" onPress={setAlarm3}/>
