@@ -51,8 +51,9 @@ export default function HomeScreen() {
       setTimeout(() => playSound(), dateDiff0);
       const hour = 1000 * 3600;
       const minute = 1000 * 60;
-      console.log("Alarm will ring in " + dateDiff0 / (dateDiff0 > hour ? hour : minute)
-      + (dateDiff0 > hour ? " hours." : " minutes."));
+      console.log("Alarm will ring in " + dateDiff0 / (dateDiff0 > hour ? hour
+        : dateDiff0 > minute ? minute : 1000)
+      + (dateDiff0 > hour ? " hours." : dateDiff0 > minute ? " minutes." : " seconds."));
     }
   }
   function verifyTime() {
